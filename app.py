@@ -113,7 +113,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "template",
+            "type": "text",
             "text": {
                 "preview_url": False,
                 "body": "🚀 Hola, ¿Cómo estás? Bienvenido."
