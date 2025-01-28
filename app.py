@@ -184,32 +184,32 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Eventos",
                             "rows":[
                                 {
-                                    "id":"1",
+                                    "id":"1l",
                                     "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
                                     "description": "Enero 31 - Febrero 02 (Campamento)"
                                 },
                                 {
-                                    "id":"2",
+                                    "id":"2l",
                                     "title" : "Volcán Pacaya",
                                     "description": "Febrero 09 (Atardecer)"
                                 },
                                 {
-                                    "id":"3",
+                                    "id":"3l",
                                     "title" : "Volcán Acatenango (Ruta Alotenango)",
                                     "description": "Febrero 08 - 09 (Asalto)"
                                 },
                                 {
-                                    "id":"4",
+                                    "id":"4l",
                                     "title" : "Volcán Santa María + Campana Abaj",
                                     "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
                                 },
                                 {
-                                    "id":"5",
+                                    "id":"5l",
                                     "title" : "Volcán Santa María + Campana Abaj",
                                     "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
                                 },
                                 {
-                                    "id":"6",
+                                    "id":"6l",
                                     "title" : "Volcán Tajumulco",
                                     "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
                                 }
@@ -336,7 +336,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
         
-    elif "1" in texto:
+    elif "1l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -358,7 +358,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "2" in texto:
+    elif "2l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -378,7 +378,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "3" in texto:
+    elif "3l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -399,7 +399,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "4" in texto:
+    elif "4l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -422,7 +422,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "5" in texto:
+    elif "5l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -446,7 +446,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "6" in texto:
+    elif "6l" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
