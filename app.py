@@ -113,7 +113,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
+            "type": "template",
             "text": {
                 "preview_url": False,
                 "body": "🚀 Hola, ¿Cómo estás? Bienvenido."
@@ -136,10 +136,10 @@ def enviar_mensajes_whatsapp(texto,number):
             "to": number,
             "type": "location",
             "location": {
-                "latitude": "-12.067158831865067",
-                "longitude": "-77.03377940839486",
-                "name": "Estadio Nacional del Perú",
-                "address": "Cercado de Lima"
+                "latitude": "14.622405",
+                "longitude": "-90.549373",
+                "name": "Centro Comercial Rus Mall",
+                "address": "Centro Comercial Rus Mall"
             }
         }
     elif "3" in texto:
@@ -160,7 +160,8 @@ def enviar_mensajes_whatsapp(texto,number):
             "to": number,
             "type": "document",
             "document": {
-                "link": "https://mountainconqueror.club/assets/document/rj.pdf"
+                "link": "https://mountainconqueror.club/assets/document/rj.pdf",
+                "caption": "Reto Jaguar"
             }
         }
     elif "5" in texto:
@@ -356,7 +357,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 Hola, visita mi web anderson-bastidas.com para más información.\n \n📌Por favor, ingresa un número #️⃣ para recibir información.\n \n1️⃣. Información del Curso. ❔\n2️⃣. Ubicación del local. 📍\n3️⃣. Enviar temario en PDF. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Video de Introducción. ⏯️\n6️⃣. Hablar con AnderCode. 🙋‍♂️\n7️⃣. Horario de Atención. 🕜 \n0️⃣. Regresar al Menú. 🕜"
+                "body": "🚀 Hola, visita mi web https://mountainconqueror.club para más información.\n \n📌Por favor, ingresa un número del menú para recibir información.\n \n1️⃣. Próximos Eventos. ❔\n2️⃣. Enviar en PDF el Reto Jaguar 📄 \n3️⃣. Enviar en PDF el Reto Maya. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Enviar en PDF el Reto Tigre. 📄\n6️⃣. Enviar en PDF el Reto Chivo. 📄 \n7️⃣. Hablar con un operador. 🙋‍♂️ \n 2️⃣. Salida desde la Capital (Centro Comercial Rus Mall). 📍\n0️⃣. Regresar al Menú. 🕜"
             }
         }
 
