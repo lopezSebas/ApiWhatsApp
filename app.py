@@ -217,7 +217,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n\n 🌐 Visita nuestra web para más detalles: mountainconqueror.club"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
             }
         }
     elif "boton" in texto:
@@ -371,7 +371,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestra web: \n mountainconqueror.club"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visito nuestro sitio web: \n mountainconqueror.club"
             }
         }
 
@@ -379,7 +379,7 @@ def enviar_mensajes_whatsapp(texto,number):
 
     headers = {
         "Content-Type" : "application/json",
-        "Authorization" : "Bearer EAA3DvBSFw0oBO1Lts6xXdZBGhCmHNvEvGlPGd22wOyd7H9fthO3MmAuHcZC0BxwQK5gvYKX3WPZBoshsvZAtKhx9a6YzpkZA87BiLtLoH8ZAMW1xmErDdeMii4rIS9zKHgR3uTUSiX64CtJGOOSZAtXJpRJS1kzT7zIkeJEaBwU3oauoIhAOZAHixUWTR5KDpNffnAUFLnmZAP7h7F544Az2td8EAGGEZD"
+        "Authorization" : "Bearer EAA3DvBSFw0oBOy6TUbXILZCO6YoSvCxn8LZCyKvAbLGP1XQpHUtImCuPKSlDipQUdCMsOlhiWIY3V37L8YfshOpbxN95kqDBFepgnygzG0Nqv0DwQWZByqxCg4IKbpO00bVHnoSnX4k0EoKIJMyHYXYwHaJhoNPqs2TGUi5N8pRCaq2zDBbYZC2ZBXsSymiIahRzGfPZCwA4ol2PqiCAbseld5NZA0l1XzQs08ZAKZAYD"
     }
 
     connection = http.client.HTTPSConnection("graph.facebook.com")
