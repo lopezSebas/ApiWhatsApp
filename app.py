@@ -184,32 +184,32 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Eventos",
                             "rows":[
                                 {
-                                    "id":"1l",
+                                    "id":"ev1",
                                     "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
                                     "description": "Enero 31 - Febrero 02 (Campamento)"
                                 },
                                 {
-                                    "id":"2l",
+                                    "id":"ev2",
                                     "title" : "Volcán Pacaya",
                                     "description": "Febrero 09 (Atardecer)"
                                 },
                                 {
-                                    "id":"3l",
+                                    "id":"ev3",
                                     "title" : "Volcán Acatenango (Ruta Alotenango)",
                                     "description": "Febrero 08 - 09 (Asalto)"
                                 },
                                 {
-                                    "id":"4l",
+                                    "id":"ev4",
                                     "title" : "Volcán Santa María + Campana Abaj",
                                     "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
                                 },
                                 {
-                                    "id":"5l",
+                                    "id":"ev5",
                                     "title" : "Volcán Santa María + Campana Abaj",
                                     "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
                                 },
                                 {
-                                    "id":"6l",
+                                    "id":"ev6",
                                     "title" : "Volcán Tajumulco",
                                     "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
                                 }
@@ -218,22 +218,22 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Retos",
                             "rows":[
                                 {
-                                    "id":"1r",
+                                    "id":"rt1",
                                     "title" : "Reto Jaguar",
                                     "description": "37 Cumbres 2025 (Guatemala)."
                                 },
                                 {
-                                    "id":"2r",
+                                    "id":"rt2",
                                     "title" : "Reto Maya",
                                     "description": "Rutas Extremas (Guatemala)."
                                 },
                                 {
-                                    "id":"3r",
+                                    "id":"rt3",
                                     "title" : "Reto Tigre",
                                     "description": "15 Volcanes El Salvador 2025"
                                 },
                                 {
-                                    "id":"4r",
+                                    "id":"rt4",
                                     "title" : "Reto Chivo",
                                     "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
                                 }
@@ -242,7 +242,7 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Trail Running",
                             "rows":[
                                 {
-                                    "id":"1tr",
+                                    "id":"tr1",
                                     "title" : "X SkyRace",
                                     "description": "Evento de Trail running a desarrollarse en el parque entre cerros, Quetzaltenango (Xela), con distancias de 10K -14K -24K -42K en los volcanes Cerro Quemado, Santa María, Siete Orejas. \n\n Abril 13 (2025)"
                                 }
@@ -336,7 +336,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
         
-    elif "1l" in texto:
+    elif "ev1" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -358,7 +358,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "2l" in texto:
+    elif "ev2" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -378,7 +378,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "3l" in texto:
+    elif "ev3" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -399,7 +399,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "4l" in texto:
+    elif "ev4" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -422,7 +422,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "5l" in texto:
+    elif "ev5" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -446,7 +446,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "6l" in texto:
+    elif "ev6" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -471,7 +471,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "1r" in texto:
+    elif "rt1" in texto:
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -482,7 +482,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Jaguar"
             }
         }
-    elif "2r" in texto:
+    elif "rt2" in texto:
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -493,7 +493,7 @@ def enviar_mensajes_whatsapp(texto,number):
                     "caption": "Reto Maya"
                 }
             }
-    elif "3r" in texto:
+    elif "rt3" in texto:
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -504,7 +504,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Tigre"
             }
         }
-    elif "4r" in texto:
+    elif "rt4" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -515,7 +515,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Chivo"
             }
         }
-    elif "1tr" in texto:
+    elif "tr1" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
