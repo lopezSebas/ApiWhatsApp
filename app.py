@@ -153,7 +153,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "address": "Shell • Rotonda Paseo Las Americas"
             }
         }
-    elif "5" in texto:
+    elif "7" in texto:
         data ={
             "messaging_product": "whatsapp",
             "to": number,
@@ -488,7 +488,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
             }
         }
-    elif "7" in texto:
+    elif "5" in texto:
         data ={
             "messaging_product": "whatsapp",
             "to": number,
@@ -516,26 +516,6 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "id":"ev2",
                                     "title" : "Volcán Pacaya",
                                     "description": "Febrero 09 (Atardecer)"
-                                },
-                                {
-                                    "id":"ev3",
-                                    "title" : "Volcán Acatenango (Ruta Alotenango)",
-                                    "description": "Febrero 08 - 09 (Asalto)"
-                                },
-                                {
-                                    "id":"ev4",
-                                    "title" : "Volcán Santa María + Campana Abaj",
-                                    "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
-                                },
-                                {
-                                    "id":"ev5",
-                                    "title" : "Volcán Santa María + Campana Abaj",
-                                    "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
-                                },
-                                {
-                                    "id":"ev6",
-                                    "title" : "Volcán Tajumulco",
-                                    "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
                                 }
                             ]
                         },{
@@ -550,16 +530,6 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "id":"rt2",
                                     "title" : "Reto Maya",
                                     "description": "Rutas Extremas (Guatemala)."
-                                },
-                                {
-                                    "id":"rt3",
-                                    "title" : "Reto Tigre",
-                                    "description": "15 Volcanes El Salvador 2025"
-                                },
-                                {
-                                    "id":"rt4",
-                                    "title" : "Reto Chivo",
-                                    "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
                                 }
                             ]
                         }
