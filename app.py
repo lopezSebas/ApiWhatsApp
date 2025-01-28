@@ -153,6 +153,55 @@ def enviar_mensajes_whatsapp(texto,number):
                 "address": "Shell • Rotonda Paseo Las Americas"
             }
         }
+    elif "5" in texto:
+        data ={
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Selecciona Alguna Opción"
+                },
+                "footer": {
+                    "text": "Selecciona una de las opciones para poder ayudarte"
+                },
+                "action":{
+                    "button":"Ver Opciones",
+                    "sections":[
+                        {
+                            "title":"Compra y Venta",
+                            "rows":[
+                                {
+                                    "id":"btncompra",
+                                    "title" : "Comprar",
+                                    "description": "Compra los mejores articulos de tecnologia"
+                                },
+                                {
+                                    "id":"btnvender",
+                                    "title" : "Vender",
+                                    "description": "Vende lo que ya no estes usando"
+                                }
+                            ]
+                        },{
+                            "title":"Distribución y Entrega",
+                            "rows":[
+                                {
+                                    "id":"btndireccion",
+                                    "title" : "Local",
+                                    "description": "Puedes visitar nuestro local."
+                                },
+                                {
+                                    "id":"btnentrega",
+                                    "title" : "Entrega",
+                                    "description": "La entrega se realiza todos los dias."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
     elif "4" in texto:
         data = {
             "messaging_product": "whatsapp",
@@ -164,17 +213,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedes escribir a mi número personal y con gustó te atenderé.* \n\n +502 34267938"
             }
         }    
-    elif "5" in texto:
-        data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "Estos serán nuestros próximos eventos."
-            }
-        }
+
     elif "0" in texto:
         data = {
             "messaging_product": "whatsapp",
@@ -449,7 +488,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
             }
         }
-    elif "5" in texto:
+    elif "7" in texto:
         data ={
             "messaging_product": "whatsapp",
             "to": number,
