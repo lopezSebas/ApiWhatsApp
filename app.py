@@ -161,7 +161,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedesde escribirme a mi número persona y con gustó te atenderé.* \n\n +502 30247344"
+                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedesde escribirme a mi número persona y con gustó te atenderé.* \n\n +502 34267938"
             }
         }    
     elif "5" in texto:
