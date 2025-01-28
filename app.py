@@ -124,11 +124,10 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "document",
-            "document": {
-                    "link": "https://mountainconqueror.club/assets/document/rt.pdf",
-                    "caption": "Reto Tigre"
-                }
+            "text": {
+                "preview_url": True,
+                "body": "Estos serán nuestros próximos tours! https://mountainconqueror.club/tours"
+            }
         }
     elif "2" in texto:
         data = {
@@ -138,7 +137,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "location": {
                 "latitude": "14.622405",
                 "longitude": "-90.549373",
-                "name": "Centro Comercial Rus Mall",
+                "name": "Punto de reunión (Capital) Centro Comercial Rus Mall",
                 "address": "Centro Comercial Rus Mall"
             }
         }
@@ -167,10 +166,12 @@ def enviar_mensajes_whatsapp(texto,number):
     elif "5" in texto:
         data = {
             "messaging_product": "whatsapp",
+            "recipient_type": "individual",
             "to": number,
-            "text": {
-                "preview_url": True,
-                "body": "Introduccion al curso! https://youtu.be/6ULOE2tGlBM"
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/rt.pdf",
+                "caption": "Reto Tigre"
             }
         }
     elif "6" in texto:
@@ -178,10 +179,10 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "🤝 En breve me pondre en contacto contigo. 🤓"
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/rt.pdf",
+                "caption": "Reto Chivo"
             }
         }
     elif "7" in texto:
@@ -192,7 +193,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "📅 Horario de Atención : Lunes a Viernes. \n🕜 Horario : 9:00 am a 5:00 pm 🤓"
+                "body": "🤝 En breve me pondre en contacto contigo. 🤓"
             }
         }
     elif "0" in texto:
@@ -203,7 +204,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 Hola, visita mi web https://mountainconqueror.club para más información.\n \n📌Por favor, ingresa un número del menú para recibir información.\n \n1️⃣. Próximos Eventos. ❔\n2️⃣. Enviar en PDF el Reto Jaguar 📄 \n3️⃣. Enviar en PDF el Reto Maya. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Enviar en PDF el Reto Tigre. 📄\n6️⃣. Enviar en PDF el Reto Chivo. 📄 \n7️⃣. Hablar con un operador. 🙋‍♂️ \n 2️⃣. Salida desde la Capital (Centro Comercial Rus Mall). 📍\n0️⃣. Regresar al Menú. 🕜"
+                "body": "🚀 Hola, visita mi web https://mountainconqueror.club para más información.\n \n📌Por favor, ingresa un número del menú para recibir información.\n \n1️⃣. Próximos Eventos. ❔\n2️⃣. Salida desde la Capital (Centro Comercial Rus Mall). 📍\n3️⃣. Enviar en PDF el Reto Maya. 📄\n4️⃣. Enviar en PDF el Reto Jaguar. 📄\n5️⃣. Enviar en PDF el Reto Tigre. 📄\n6️⃣. Enviar en PDF el Reto Chivo. 📄 \n7️⃣. Hablar con un operador. 🙋‍♂️ \n 0️⃣. Regresar al Menú. 🕜"
             }
         }
     elif "boton" in texto:
@@ -357,7 +358,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 Hola, visita mi web https://mountainconqueror.club para más información.\n \n📌Por favor, ingresa un número del menú para recibir información.\n \n1️⃣. Próximos Eventos. ❔\n2️⃣. Enviar en PDF el Reto Jaguar 📄 \n3️⃣. Enviar en PDF el Reto Maya. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Enviar en PDF el Reto Tigre. 📄\n6️⃣. Enviar en PDF el Reto Chivo. 📄 \n7️⃣. Hablar con un operador. 🙋‍♂️ \n 2️⃣. Salida desde la Capital (Centro Comercial Rus Mall). 📍\n0️⃣. Regresar al Menú. 🕜"
+                "body": "🚀 Hola, visita mi web https://mountainconqueror.club para más información.\n \n📌Por favor, ingresa un número del menú para recibir información.\n \n1️⃣. Próximos Eventos. ❔\n2️⃣. Salida desde la Capital (Centro Comercial Rus Mall). 📍\n3️⃣. Enviar en PDF el Reto Maya. 📄\n4️⃣. Enviar en PDF el Reto Jaguar. 📄\n5️⃣. Enviar en PDF el Reto Tigre. 📄\n6️⃣. Enviar en PDF el Reto Chivo. 📄 \n7️⃣. Hablar con un operador. 🙋‍♂️ \n 0️⃣. Regresar al Menú. 🕜"
             }
         }
 
