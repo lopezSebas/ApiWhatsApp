@@ -562,15 +562,6 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
                                 }
                             ]
-                        },{
-                            "title":"Trail Running",
-                            "rows":[
-                                {
-                                    "id":"tr1",
-                                    "title" : "X SkyRace",
-                                    "description": "Evento de Trail running a desarrollarse en el parque entre cerros, Quetzaltenango (Xela), con distancias de 10K -14K -24K -42K en los volcanes Cerro Quemado, Santa María, Siete Orejas. \n\n Abril 13 (2025)"
-                                }
-                            ]
                         }
                     ]
                 }
