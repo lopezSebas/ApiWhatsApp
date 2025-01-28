@@ -154,51 +154,6 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
     elif "4" in texto:
-        data={
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "document",
-            "document": {
-                    "link": "https://mountainconqueror.club/assets/document/rm.pdf",
-                    "caption": "Reto Maya"
-                }
-            }
-    elif "5" in texto:
-        data={
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "document",
-            "document": {
-                "link": "https://mountainconqueror.club/assets/document/rj.pdf",
-                "caption": "Reto Jaguar"
-            }
-        }
-    elif "6" in texto:
-        data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "document",
-            "document": {
-                "link": "https://mountainconqueror.club/assets/document/rt.pdf",
-                "caption": "Reto Tigre"
-            }
-        }
-    elif "7" in texto:
-        data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "document",
-            "document": {
-                "link": "https://mountainconqueror.club/assets/document/rt.pdf",
-                "caption": "Reto Chivo"
-            }
-        }
-    elif "8" in texto:
-        number = "50230247344"
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -206,7 +161,95 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🙋‍♂️ Hola Sebas, no encontré la información que buscaba en el chat del bot y solicitó tu apoyo para resolver mis dudas. \n\n📌 *Responde lo antes posible para asistirme.*"
+                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedesde escribirme a mi número persona y con gustó te atenderé.* \n\n +502 30247344"
+            }
+        }    
+    elif "5" in texto:
+        data ={
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Seleccionar Lista"
+                },
+                "footer": {
+                    "text": "Selecciona el listado de eventos próximos"
+                },
+                "action":{
+                    "button":"Ver Eventos",
+                    "sections":[
+                        {
+                            "title":"Eventos",
+                            "rows":[
+                                {
+                                    "id":"1",
+                                    "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
+                                    "description": "Enero 31 - Febrero 02 (Campamento)"
+                                },
+                                {
+                                    "id":"2",
+                                    "title" : "Volcán Pacaya",
+                                    "description": "Febrero 09 (Atardecer)"
+                                },
+                                {
+                                    "id":"3",
+                                    "title" : "Volcán Acatenango (Ruta Alotenango)",
+                                    "description": "Febrero 08 - 09 (Asalto)"
+                                },
+                                {
+                                    "id":"4",
+                                    "title" : "Volcán Santa María + Campana Abaj",
+                                    "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
+                                },
+                                {
+                                    "id":"5",
+                                    "title" : "Volcán Santa María + Campana Abaj",
+                                    "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
+                                },
+                                {
+                                    "id":"6",
+                                    "title" : "Volcán Tajumulco",
+                                    "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
+                                }
+                            ]
+                        },{
+                            "title":"Retos",
+                            "rows":[
+                                {
+                                    "id":"1r",
+                                    "title" : "Reto Jaguar",
+                                    "description": "37 Cumbres 2025 (Guatemala)."
+                                },
+                                {
+                                    "id":"2r",
+                                    "title" : "Reto Maya",
+                                    "description": "Rutas Extremas (Guatemala)."
+                                },
+                                {
+                                    "id":"3r",
+                                    "title" : "Reto Tigre",
+                                    "description": "15 Volcanes El Salvador 2025"
+                                },
+                                {
+                                    "id":"4r",
+                                    "title" : "Reto Chivo",
+                                    "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
+                                }
+                            ]
+                        },{
+                            "title":"Trail Running",
+                            "rows":[
+                                {
+                                    "id":"1tr",
+                                    "title" : "X SkyRace",
+                                    "description": "Evento de Trail running a desarrollarse en el parque entre cerros, Quetzaltenango (Xela), con distancias de 10K -14K -24K -42K en los volcanes Cerro Quemado, Santa María, Siete Orejas. \n\n Abril 13 (2025)"
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
     elif "0" in texto:
@@ -217,7 +260,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Hablar con un operador 🙋‍♂️\n5️⃣ Información de Eventos y Retos 🌋\n 0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
             }
         }
     elif "boton" in texto:
@@ -292,67 +335,187 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "Estare a la espera."
             }
         }
-    elif "lista" in texto:
-        data ={
+        
+    elif "1" in texto:
+        data = {
             "messaging_product": "whatsapp",
+            "recipient_type": "individual",
             "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type" : "list",
-                "body": {
-                    "text": "Selecciona Alguna Opción"
-                },
-                "footer": {
-                    "text": "Selecciona una de las opciones para poder ayudarte"
-                },
-                "action":{
-                    "button":"Ver Opciones",
-                    "sections":[
-                        {
-                            "title":"Compra y Venta",
-                            "rows":[
-                                {
-                                    "id":"btncompra",
-                                    "title" : "Comprar",
-                                    "description": "Compra los mejores articulos de tecnologia"
-                                },
-                                {
-                                    "id":"btnvender",
-                                    "title" : "Vender",
-                                    "description": "Vende lo que ya no estes usando"
-                                }
-                            ]
-                        },{
-                            "title":"Distribución y Entrega",
-                            "rows":[
-                                {
-                                    "id":"btndireccion",
-                                    "title" : "Local",
-                                    "description": "Puedes visitar nuestro local."
-                                },
-                                {
-                                    "id":"btnentrega",
-                                    "title" : "Entrega",
-                                    "description": "La entrega se realiza todos los dias."
-                                }
-                            ]
-                        }
-                    ]
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/0.Volcanes_7_Orejas_Cerro_Quemado_Cerro_El_Granizo.pdf",
+                "caption": (
+                    "🌋🔥 *¡Aventura Triple: Siete Orejas, Cerro Quemado y Cerro El Granizo!* 🔥🌋\n\n"
+                    "Prepárate para una jornada épica en tres de las maravillas naturales más fascinantes de Guatemala. "
+                    "Esta travesía te llevará desde las alturas del *Volcán Siete Orejas*, pasando por las formaciones "
+                    "místicas del *Cerro Quemado*, hasta la imponencia del *Cerro El Granizo*, todo en una experiencia "
+                    "que pondrá a prueba tu resistencia y amor por la montaña. 🏔️✨\n\n"
+                    "🔹 *Volcán Siete Orejas*: Con sus siete cumbres, este volcán ofrece paisajes únicos y una conexión profunda con la naturaleza. 🌄\n"
+                    "🔹 *Cerro Quemado*: Terrenos volcánicos y vistas espectaculares en una formación cargada de historia y energía. 🔥\n"
+                    "🔹 *Cerro El Granizo*: La combinación perfecta de desafío y recompensa con paisajes que te dejarán sin aliento. 🌳\n\n"
+                    "✅ *¡No te pierdas esta increíble oportunidad!* Vive una experiencia inolvidable que combina aventura, naturaleza y el espíritu de superación. 💪🐾\n\n"
+                    "#SieteOrejas #CerroQuemado #CerroElGranizo #MontañismoGuatemala #PasiónPorLasAlturas #ConquistaTriple #AventuraÉpica"
+                )
+            }
+        }
+    elif "2" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/1.Volcan_Pacaya_Atardecer.pdf",
+                "caption": (
+                    "🌋🔥 *¡Cupo Lleno para el Volcán Pacaya!* 🔥🌋\n\n"
+                    "¡Gracias a todos los aventureros por su entusiasmo! 🎉 Hemos llenado todos los cupos para esta increíble expedición "
+                    "al *Volcán Pacaya*, uno de los destinos más espectaculares y dinámicos de Guatemala. 🏔️✨\n\n"
+                    "Prepárense para vivir una experiencia inolvidable, caminando sobre paisajes únicos, admirando ríos de lava petrificada "
+                    "y disfrutando de vistas panorámicas que quitan el aliento. 🌄🔥 Cada paso en esta aventura será un recuerdo imborrable.\n\n"
+                    "❗ *Si no alcanzaste cupo esta vez, no te preocupes.* Muy pronto anunciaremos nuevas fechas y rutas para que puedas unirte "
+                    "a nuestras próximas expediciones. 🚶‍♂️🐾\n\n"
+                    "#VolcánPacaya #AventuraÉpica #PasiónPorLaMontaña #MontañismoGuatemala #EspírituDeAventura"
+                )
+            }
+        }
+    elif "3" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/2.Acatenango_Ruta_Alotenango.pdf",
+                "caption": (
+                    "🌋🔥 *¡Desafío Extremo en el Volcán Acatenango por la Ruta Alotenango!* 🔥🌋\n\n"
+                    "Este no es un ascenso cualquiera, es una *aventura extrema* reservada para los más valientes y experimentados. "
+                    "La *Ruta Alotenango* es conocida por ser desafiante, intensa y llena de emociones que pondrán a prueba tu resistencia física y mental. 🏔️💪\n\n"
+                    "Si buscas superar tus límites, atravesar terrenos empinados y disfrutar de vistas espectaculares mientras conquistas una de las "
+                    "cumbres más imponentes de Guatemala, *esta es tu oportunidad*. 🌄✨\n\n"
+                    "⚠️ *No apto para principiantes*: Este desafío requiere experiencia previa en montañismo, excelente condición física y determinación "
+                    "para enfrentar uno de los ascensos más intensos de la región.\n\n"
+                    "❓ *¿Estás listo para el reto?* ¡Únete y demuestra de qué estás hecho en esta aventura inolvidable! 🔥🐾\n\n"
+                    "#AcatenangoExtremo #RutaAlotenango #AventuraÉpica #MontañismoGuatemala #DesafíoDeAltura #NoParaPrincipiantes #ConquistaLasCimas"
+                )
+            }
+        }
+    elif "4" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/3.Volcan_Santa_Maria_Turistica.pdf",
+                "caption": (
+                    "🌋✨ *¡Aventura en el Volcán Santa María y Campana Abaj!* ✨🌋\n\n"
+                    "Prepárate para explorar una de las rutas más espectaculares y accesibles de Guatemala: el *Volcán Santa María* "
+                    "y la mágica experiencia en *Campana Abaj*. Este recorrido turístico combina paisajes impresionantes, historia cultural "
+                    "y la belleza natural que solo este destino puede ofrecer. 🏔️🌿\n\n"
+                    "🔹 *Volcán Santa María*: Con una de las vistas más impresionantes hacia el volcán activo *Santiaguito*, este coloso "
+                    "es una parada obligatoria para los amantes de las alturas y la naturaleza. 🌄🔥\n"
+                    "🔹 *Campana Abaj*: Un lugar lleno de misticismo y tradición que conecta a los visitantes con la cultura y el legado "
+                    "ancestral de la región. Una experiencia inolvidable rodeada de paisajes únicos. ✨🌳\n\n"
+                    "❓ *¿Listo para esta aventura turística?* Únete a este recorrido que combina naturaleza, cultura y la magia de nuestras "
+                    "montañas. Una oportunidad para disfrutar del esplendor de Guatemala en su máximo esplendor. 💪🐾\n\n"
+                    "#VolcánSantaMaría #CampanaAbaj #AventuraTurística #NaturalezaYTradición #MontañismoGuatemala #PasiónPorLaCultura"
+                )
+            }
+        }
+    elif "5" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/4.Volcan_Santa_Maria_Ruta_La_Virgen.pdf",
+                "caption": (
+                    "🌋🔥 *¡Aventura Extrema: Ruta La Virgen al Volcán Santa María!* 🔥🌋\n\n"
+                    "Para los más valientes y audaces, presentamos *Ruta La Virgen*, un recorrido desafiante, poco explorado "
+                    "y diseñado exclusivamente para los más intrépidos. Esta nueva ruta hacia el imponente *Volcán Santa María* "
+                    "promete poner a prueba tu resistencia y espíritu aventurero mientras descubres senderos ocultos y paisajes "
+                    "que pocos han visto. 🏔️💪✨\n\n"
+                    "Con *terrenos escarpados, inclinaciones pronunciadas y una conexión inigualable con la naturaleza*, *Ruta La Virgen* "
+                    "es el desafío perfecto para quienes buscan algo más allá de lo ordinario. Cada paso será un logro, y la recompensa "
+                    "final será una experiencia que marcará tu vida. 🌄🔥\n\n"
+                    "⚠️ *No es para principiantes:* Este recorrido exige preparación física, determinación y el alma de un verdadero explorador.\n\n"
+                    "❓ *¿Te atreves a ser parte de esta travesía épica?* La cima del *Santa María* te espera para escribir una nueva historia de "
+                    "superación y aventura. 🐾🔥\n\n"
+                    "#RutaLaVirgen #VolcánSantaMaría #AventuraExtrema #SoloParaIntrepidos #MontañismoGuatemala #ConquistaLasAlturas"
+                )
+            }
+        }
+    elif "6" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/5.Volcan_Tajumulco_Ruta_San_Sebastian_Nocturno.pdf",
+                "caption": (
+                    "🌋🔥 *¡Conquista el techo de Centroamérica: Volcán Tajumulco!* 🔥🌋\n\n"
+                    "Prepárate para una de las expediciones más emblemáticas de Guatemala: el ascenso al *Volcán Tajumulco*, "
+                    "el punto más alto de toda Centroamérica con *4,220 metros sobre el nivel del mar*. 🏔️✨\n\n"
+                    "Esta travesía te llevará a través de *impresionantes paisajes montañosos, bosques de altura y cielos despejados* "
+                    "que regalan *amaneceres y atardeceres de ensueño*. Cada paso en esta aventura pondrá a prueba tu resistencia, "
+                    "pero la recompensa en la cima será inigualable. 🌄💪\n\n"
+                    "🌟 *Lo que te espera en el Tajumulco:*\n"
+                    "🔹 *Ascenso desafiante* con vistas panorámicas inigualables.\n"
+                    "🔹 *Amanecer desde la cima*, un espectáculo de colores y nubes danzando bajo tus pies.\n"
+                    "🔹 *Conexión con la naturaleza* y el espíritu aventurero que llevas dentro.\n\n"
+                    "✅ *No te pierdas esta oportunidad de conquistar el techo de Centroamérica* y ser parte de una experiencia inolvidable. "
+                    "¿Estás listo para el reto? 🚀🔥\n\n"
+                    "#VolcánTajumulco #TechoDeCentroamérica #AventuraÉpica #MontañismoGuatemala #SuperandoLímites #ConquistandoCimas"
+                )
+            }
+        }
+    elif "1r" in texto:
+        data={
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/rj.pdf",
+                "caption": "Reto Jaguar"
+            }
+        }
+    elif "2r" in texto:
+        data={
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                    "link": "https://mountainconqueror.club/assets/document/rm.pdf",
+                    "caption": "Reto Maya"
                 }
             }
-        }
-    elif "btncompra" in texto:
-        data = {
+    elif "3r" in texto:
+        data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": False,
-                "body": "Los mejos articulos top en ofertas."
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/rt.pdf",
+                "caption": "Reto Tigre"
             }
         }
-    elif "btnvender" in texto:
+    elif "4r" in texto:
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/rc.pdf",
+                "caption": "Reto Chivo"
+            }
+        }
+    elif "1tr" in texto:
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -360,7 +523,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Excelente elección."
+                "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
             }
         }
     else:
@@ -371,7 +534,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visito nuestro sitio web: \n mountainconqueror.club"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Hablar con un operador 🙋‍♂️\n5️⃣ Información de Eventos y Retos 🌋\n 0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
             }
         }
 
@@ -385,7 +548,7 @@ def enviar_mensajes_whatsapp(texto,number):
     connection = http.client.HTTPSConnection("graph.facebook.com")
 
     try:
-        connection.request("POST","/v21.0/466906233180614/messages", data, headers)
+        connection.request("POST","/v21.0/557632224096092/messages", data, headers)
         response = connection.getresponse()
         print(response.status, response.reason)
     except Exception as e:
