@@ -217,7 +217,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 **¡Hola!** Gracias por comunicarte con nosotros\n\n📌 **Selecciona una opción del menú para continuar:**\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n\n 🌐 Visita nuestra web para más detalles: [mountainconqueror.club](https://mountainconqueror.club)"
+                "body": "🚀 *¡Hola* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n\n 🌐 Visita nuestra web para más detalles: mountainconqueror.club"
             }
         }
     elif "boton" in texto:
@@ -371,7 +371,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 **¡Hola!** Gracias por comunicarte con nosotros\n\n📌 **Selecciona una opción del menú para continuar:**\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n\n 🌐 Visita nuestra web para más detalles: [mountainconqueror.club](https://mountainconqueror.club)"
+                "body": "🚀 *¡Hola* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Enviar en PDF el Reto Maya 📄\n5️⃣ Enviar en PDF el Reto Jaguar 📄\n6️⃣ Enviar en PDF el Reto Tigre 📄\n7️⃣ Enviar en PDF el Reto Chivo 📄\n8️⃣ Hablar con un operador 🙋‍♂️\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n\n 🌐 Visita nuestra web para más detalles: mountainconqueror.club"
             }
         }
 
