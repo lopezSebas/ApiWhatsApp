@@ -174,8 +174,8 @@ def enviar_mensajes_whatsapp(texto,number):
                             "rows":[
                                 {
                                     "id":"btncompra",
-                                    "title" : "Comprar",
-                                    "description": "Compra los mejores articulos de tecnologia"
+                                    "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
+                                    "description": "Enero 31 - Febrero 02 (Campamento)"
                                 },
                                 {
                                     "id":"btnvender",
