@@ -260,7 +260,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Hablar con un operador 🙋‍♂️\n5️⃣ Información de Eventos y Retos 🌋\n 0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Hablar con un operador 🙋‍♂️\n5️⃣ Información de Eventos y Retos 🌋\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
             }
         }
     elif "boton" in texto:
@@ -534,7 +534,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedes escribir a mi número personal y con gustó te atenderé.* \n\n +502 34267938"
+                "body": "🚀 *¡Hola!* Gracias por comunicarte con nosotros\n\n📌 *Selecciona una opción del menú para continuar:*\n\n1️⃣ Próximos Eventos ❔\n2️⃣ Salida desde la Capital 📍\n3️⃣ Salida desde Xela 📍\n4️⃣ Hablar con un operador 🙋‍♂️\n5️⃣ Información de Eventos y Retos 🌋\n0️⃣ Regresar al Menú 🕜\n\n✨ *Escribe el número de la opción que deseas y te ayudaremos de inmediato.* \n\n\n 🌐 Visita nuestro sitio web:\n mountainconqueror.club"
             }
         }
 
