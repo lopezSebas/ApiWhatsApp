@@ -165,91 +165,14 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }    
     elif "5" in texto:
-        data ={
+        data = {
             "messaging_product": "whatsapp",
+            "recipient_type": "individual",
             "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type" : "list",
-                "body": {
-                    "text": "Seleccionar Lista"
-                },
-                "footer": {
-                    "text": "Selecciona el listado de eventos próximos"
-                },
-                "action":{
-                    "button":"Ver Eventos",
-                    "sections":[
-                        {
-                            "title":"Eventos",
-                            "rows":[
-                                {
-                                    "id":"ev1",
-                                    "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
-                                    "description": "Enero 31 - Febrero 02 (Campamento)"
-                                },
-                                {
-                                    "id":"ev2",
-                                    "title" : "Volcán Pacaya",
-                                    "description": "Febrero 09 (Atardecer)"
-                                },
-                                {
-                                    "id":"ev3",
-                                    "title" : "Volcán Acatenango (Ruta Alotenango)",
-                                    "description": "Febrero 08 - 09 (Asalto)"
-                                },
-                                {
-                                    "id":"ev4",
-                                    "title" : "Volcán Santa María + Campana Abaj",
-                                    "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
-                                },
-                                {
-                                    "id":"ev5",
-                                    "title" : "Volcán Santa María + Campana Abaj",
-                                    "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
-                                },
-                                {
-                                    "id":"ev6",
-                                    "title" : "Volcán Tajumulco",
-                                    "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
-                                }
-                            ]
-                        },{
-                            "title":"Retos",
-                            "rows":[
-                                {
-                                    "id":"rt1",
-                                    "title" : "Reto Jaguar",
-                                    "description": "37 Cumbres 2025 (Guatemala)."
-                                },
-                                {
-                                    "id":"rt2",
-                                    "title" : "Reto Maya",
-                                    "description": "Rutas Extremas (Guatemala)."
-                                },
-                                {
-                                    "id":"rt3",
-                                    "title" : "Reto Tigre",
-                                    "description": "15 Volcanes El Salvador 2025"
-                                },
-                                {
-                                    "id":"rt4",
-                                    "title" : "Reto Chivo",
-                                    "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
-                                }
-                            ]
-                        },{
-                            "title":"Trail Running",
-                            "rows":[
-                                {
-                                    "id":"tr1",
-                                    "title" : "X SkyRace",
-                                    "description": "Evento de Trail running a desarrollarse en el parque entre cerros, Quetzaltenango (Xela), con distancias de 10K -14K -24K -42K en los volcanes Cerro Quemado, Santa María, Siete Orejas. \n\n Abril 13 (2025)"
-                                }
-                            ]
-                        }
-                    ]
-                }
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": "Estos serán nuestros próximos eventos."
             }
         }
     elif "0" in texto:
@@ -524,6 +447,94 @@ def enviar_mensajes_whatsapp(texto,number):
             "text": {
                 "preview_url": False,
                 "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
+            }
+        }
+    elif "5" in texto:
+        data ={
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Seleccionar Lista"
+                },
+                "footer": {
+                    "text": "Selecciona el listado de eventos próximos"
+                },
+                "action":{
+                    "button":"Ver Eventos",
+                    "sections":[
+                        {
+                            "title":"Eventos",
+                            "rows":[
+                                {
+                                    "id":"ev1",
+                                    "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
+                                    "description": "Enero 31 - Febrero 02 (Campamento)"
+                                },
+                                {
+                                    "id":"ev2",
+                                    "title" : "Volcán Pacaya",
+                                    "description": "Febrero 09 (Atardecer)"
+                                },
+                                {
+                                    "id":"ev3",
+                                    "title" : "Volcán Acatenango (Ruta Alotenango)",
+                                    "description": "Febrero 08 - 09 (Asalto)"
+                                },
+                                {
+                                    "id":"ev4",
+                                    "title" : "Volcán Santa María + Campana Abaj",
+                                    "description": "Febrero 15 - 16 (Ruta Turistica - Asalto Nocturno)"
+                                },
+                                {
+                                    "id":"ev5",
+                                    "title" : "Volcán Santa María + Campana Abaj",
+                                    "description": "Febrero 15 - 16 (Ruta La Viergen - Asalto Nocturno)"
+                                },
+                                {
+                                    "id":"ev6",
+                                    "title" : "Volcán Tajumulco",
+                                    "description": "Febrero 09 (Asalto - Ruta San Sebastián con acercamiento 4x4)"
+                                }
+                            ]
+                        },{
+                            "title":"Retos",
+                            "rows":[
+                                {
+                                    "id":"rt1",
+                                    "title" : "Reto Jaguar",
+                                    "description": "37 Cumbres 2025 (Guatemala)."
+                                },
+                                {
+                                    "id":"rt2",
+                                    "title" : "Reto Maya",
+                                    "description": "Rutas Extremas (Guatemala)."
+                                },
+                                {
+                                    "id":"rt3",
+                                    "title" : "Reto Tigre",
+                                    "description": "15 Volcanes El Salvador 2025"
+                                },
+                                {
+                                    "id":"rt4",
+                                    "title" : "Reto Chivo",
+                                    "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
+                                }
+                            ]
+                        },{
+                            "title":"Trail Running",
+                            "rows":[
+                                {
+                                    "id":"tr1",
+                                    "title" : "X SkyRace",
+                                    "description": "Evento de Trail running a desarrollarse en el parque entre cerros, Quetzaltenango (Xela), con distancias de 10K -14K -24K -42K en los volcanes Cerro Quemado, Santa María, Siete Orejas. \n\n Abril 13 (2025)"
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
     else:
