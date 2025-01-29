@@ -173,7 +173,7 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Compra y Venta",
                             "rows":[
                                 {
-                                    "id":"btncompra",
+                                    "id":"ev1",
                                     "title" : "Volcanes",
                                     "description": "Enero 31 Febrero 02 Campamento"
                                 },
