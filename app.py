@@ -153,7 +153,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "address": "Shell • Rotonda Paseo Las Americas"
             }
         }
-    elif "7" in texto:
+    elif "7" == texto:
         data ={
             "messaging_product": "whatsapp",
             "to": number,
@@ -298,7 +298,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
         
-    elif "ev1" in texto:
+    elif "ev1" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -320,7 +320,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev2" in texto:
+    elif "ev2" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -340,7 +340,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev3" in texto:
+    elif "ev3" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -361,7 +361,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev4" in texto:
+    elif "ev4" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -384,7 +384,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev5" in texto:
+    elif "ev5" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -408,7 +408,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev6" in texto:
+    elif "ev6" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -433,7 +433,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "rt1" in texto:
+    elif "rt1" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -444,7 +444,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Jaguar"
             }
         }
-    elif "rt2" in texto:
+    elif "rt2" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -455,7 +455,7 @@ def enviar_mensajes_whatsapp(texto,number):
                     "caption": "Reto Maya"
                 }
             }
-    elif "rt3" in texto:
+    elif "rt3" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -466,7 +466,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Tigre"
             }
         }
-    elif "rt4" in texto:
+    elif "rt4" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -477,7 +477,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Chivo"
             }
         }
-    elif "tr1" in texto:
+    elif "tr1" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -488,7 +488,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
             }
         }
-    elif "5" in texto:
+    elif "5" == texto.strip():
         data ={
             "messaging_product": "whatsapp",
             "to": number,
