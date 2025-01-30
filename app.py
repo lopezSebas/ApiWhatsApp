@@ -175,7 +175,7 @@ def enviar_mensajes_whatsapp(texto,number):
                             "rows":[
                                 {
                                     "id":"ev1",
-                                    "title" : "Volcanes Orejas Cerro Quemado Cerro El Granizo",
+                                    "title" : "Volcanes Orejas Cerro",
                                     "description": "Enero 31 Febrero 02 Campamento"
                                 },
                                 {
