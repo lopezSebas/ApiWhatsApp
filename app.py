@@ -162,6 +162,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "type" : "list",
                 "body": {
                     "text": "Selecciona Alguna Opción"
+                    
                 },
                 "footer": {
                     "text": "Selecciona una de las opciones para poder ayudarte"
@@ -174,7 +175,7 @@ def enviar_mensajes_whatsapp(texto,number):
                             "rows":[
                                 {
                                     "id":"ev1",
-                                    "title" : "Volcanes 7 Orejas Cerro Quemado Cerro El Granizo",
+                                    "title" : "Volcanes Orejas Cerro Quemado Cerro El Granizo",
                                     "description": "Enero 31 Febrero 02 Campamento"
                                 },
                                 {
