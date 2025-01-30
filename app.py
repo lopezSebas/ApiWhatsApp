@@ -228,7 +228,89 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedes escribir al número personal y con gusto te atenderá.* \n\n +502 34267938"
             }
         }    
-
+    elif "5" in texto:
+        data ={
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",
+            "interactive":{
+                "type" : "list",
+                "body": {
+                    "text": "Seleccionar Lista"
+                },
+                "footer": {
+                    "text": "Selecciona el listado de eventos próximos"
+                },
+                "action":{
+                    "button":"Ver Eventos",
+                    "sections":[
+                        {
+                            "title":"Eventos",
+                            "rows":[
+                                {
+                                    "id":"a",
+                                    "title" : "Enero 31 - Febrero 02",
+                                    "description": "(Campamento) Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo"
+                                },
+                                {
+                                    "id":"b",
+                                    "title" : "Febrero 09",
+                                    "description": "(Atardecer) Volcán Pacaya"
+                                },
+                                {
+                                    "id":"c",
+                                    "title" : "Febrero 08 - 09",
+                                    "description": "(Ruta Alotenango - Asalto) Volcán Acatenango"
+                                },
+                                {
+                                    "id":"d",
+                                    "title" : "Febrero 15 - 16",
+                                    "description": "(Ruta Turistica - Asalto Nocturno) Volcán Santa María + Campana Abaj"
+                                },
+                                {
+                                    "id":"e",
+                                    "title" : "Febrero 15 - 16",
+                                    "description": "(Ruta La Viergen - Asalto Nocturno) Volcán Santa María + Campana Abaj"
+                                },
+                                {
+                                    "id":"f",
+                                    "title" : "Febrero 21 - 23",
+                                    "description": "Volcán Tajumulco (Asalto - Ruta San Sebastián con acercamiento de 4x4)"
+                                }
+                            ]
+                        },{
+                            "title":"Retos",
+                            "rows":[
+                                {
+                                    "id":"z",
+                                    "title" : "Reto Jaguar",
+                                    "description": "37 Cumbres 2025 (Guatemala)."
+                                },
+                                {
+                                    "id":"y",
+                                    "title" : "Reto Maya",
+                                    "description": "Rutas Extremas (Guatemala)."
+                                },
+                                {
+                                    "id":"w",
+                                    "title" : "Reto Chivo",
+                                    "description": "37 Cumbres 2025 (Guatemala) - Salida desde Xela"
+                                }
+                            ]
+                        },{
+                            "title":"Trail Running",
+                            "rows":[
+                                {
+                                    "id":"t",
+                                    "title" : "Abril 13 2025(X SkyRace)",
+                                    "description": "Evento de Trail running (X SkyRace) con distancias de 10K 14K 24K 42K"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
     elif "0" in texto:
         data = {
             "messaging_product": "whatsapp",
@@ -313,7 +395,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
         
-    elif "ev1" == texto.strip():
+    elif "a" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -335,7 +417,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev2" == texto.strip():
+    elif "b" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -355,7 +437,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev3" == texto.strip():
+    elif "c" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -376,7 +458,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev4" == texto.strip():
+    elif "d" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -399,7 +481,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev5" == texto.strip():
+    elif "e" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -423,7 +505,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "ev6" == texto.strip():
+    elif "f" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -448,7 +530,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 )
             }
         }
-    elif "rt1" == texto.strip():
+    elif "z" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -459,7 +541,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Jaguar"
             }
         }
-    elif "rt2" == texto.strip():
+    elif "y" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -470,7 +552,7 @@ def enviar_mensajes_whatsapp(texto,number):
                     "caption": "Reto Maya"
                 }
             }
-    elif "rt3" == texto.strip():
+    elif "x" == texto.strip():
         data={
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -481,7 +563,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Tigre"
             }
         }
-    elif "rt4" == texto.strip():
+    elif "w" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -492,7 +574,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 "caption": "Reto Chivo"
             }
         }
-    elif "tr1" == texto.strip():
+    elif "t" == texto.strip():
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -501,55 +583,6 @@ def enviar_mensajes_whatsapp(texto,number):
             "text": {
                 "preview_url": False,
                 "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
-            }
-        }
-    elif "5" == texto.strip():
-        data ={
-            "messaging_product": "whatsapp",
-            "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type" : "list",
-                "body": {
-                    "text": "Seleccionar Lista"
-                },
-                "footer": {
-                    "text": "Selecciona el listado de eventos próximos"
-                },
-                "action":{
-                    "button":"Ver Eventos",
-                    "sections":[
-                        {
-                            "title":"Eventos",
-                            "rows":[
-                                {
-                                    "id":"ev1",
-                                    "title" : "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo",
-                                    "description": "Enero 31 - Febrero 02 (Campamento)"
-                                },
-                                {
-                                    "id":"ev2",
-                                    "title" : "Volcán Pacaya",
-                                    "description": "Febrero 09 (Atardecer)"
-                                }
-                            ]
-                        },{
-                            "title":"Retos",
-                            "rows":[
-                                {
-                                    "id":"rt1",
-                                    "title" : "Reto Jaguar",
-                                    "description": "37 Cumbres 2025 (Guatemala)."
-                                },
-                                {
-                                    "id":"rt2",
-                                    "title" : "Reto Maya",
-                                    "description": "Rutas Extremas (Guatemala)."
-                                }
-                            ]
-                        }
-                    ]
-                }
             }
         }
     else:
