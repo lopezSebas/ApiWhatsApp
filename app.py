@@ -426,14 +426,19 @@ def enviar_mensajes_whatsapp(texto,number):
             "document": {
                 "link": "https://mountainconqueror.club/assets/document/events/1.Volcan_Pacaya_Atardecer.pdf",
                 "caption": (
-                    "🌋🔥 *¡Cupo Lleno para el Volcán Pacaya!* 🔥🌋\n\n"
-                    "¡Gracias a todos los aventureros por su entusiasmo! 🎉 Hemos llenado todos los cupos para esta increíble expedición "
-                    "al *Volcán Pacaya*, uno de los destinos más espectaculares y dinámicos de Guatemala. 🏔️✨\n\n"
-                    "Prepárense para vivir una experiencia inolvidable, caminando sobre paisajes únicos, admirando ríos de lava petrificada "
-                    "y disfrutando de vistas panorámicas que quitan el aliento. 🌄🔥 Cada paso en esta aventura será un recuerdo imborrable.\n\n"
-                    "❗ *Si no alcanzaste cupo esta vez, no te preocupes.* Muy pronto anunciaremos nuevas fechas y rutas para que puedas unirte "
-                    "a nuestras próximas expediciones. 🚶‍♂️🐾\n\n"
-                    "#VolcánPacaya #AventuraÉpica #PasiónPorLaMontaña #MontañismoGuatemala #EspírituDeAventura"
+                    "🌋🔥 *¡Vive la Experiencia del Volcán Pacaya!* 🔥🌋\n\n"
+                    "🚀 Únete a una **aventura inolvidable** explorando uno de los volcanes más impresionantes de Guatemala. "
+                    "Disfruta de paisajes espectaculares, senderos rodeados de lava petrificada y una vista increíble de la actividad volcánica. 🌄🔥\n\n"
+                    "📌 **Incluye:**\n"
+                    "✔️ Transporte ida y vuelta 🚌\n"
+                    "✔️ Guías expertos 🏞️\n"
+                    "✔️ Experiencia única con vistas panorámicas 🌅\n"
+                    "✔️ Oportunidad de asar malvaviscos en la lava caliente 🔥\n\n"
+                    "🎟️ *Reserva tu cupo ahora y prepárate para una experiencia épica.*\n"
+                    "📅 Fecha: Febrero 09\n"
+                    "💰 Costo: Q160\n\n"
+                    "📲 *¡Escríbenos para más información y asegura tu lugar!* 🏔️✨\n\n"
+                    "#VolcánPacaya #AventuraÉpica #MontañismoGuatemala #PasiónPorLaNaturaleza #ViajaConNosotros"
                 )
             }
         }
