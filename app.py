@@ -198,6 +198,20 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "description": "La entrega se realiza todos los dias."
                                 }
                             ]
+                        },{
+                            "title":"Trail Running",
+                            "rows":[
+                                {
+                                    "id":"btndireccion",
+                                    "title" : "Local",
+                                    "description": "Puedes visitar nuestro local."
+                                },
+                                {
+                                    "id":"btnentrega",
+                                    "title" : "Entrega",
+                                    "description": "La entrega se realiza todos los dias."
+                                }
+                            ]
                         }
                     ]
                 }
@@ -211,7 +225,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedes escribir a mi número personal y con gustó te atenderé.* \n\n +502 34267938"
+                "body": "🙋‍♂️ Hola soy asistente de Sebas, lamento que no hayas encontrado la información que buscabas y solicitas apoyo para resolver tus dudas. \n\n📌 *Puedes escribir al número personal y con gusto te atenderá.* \n\n +502 34267938"
             }
         }    
 
