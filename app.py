@@ -306,22 +306,23 @@ def enviar_mensajes_whatsapp(texto,number):
             "to": number,
             "type": "text",
             "text": {
+                
                 "preview_url": False,
                 "body": "!Bienvenid@ a la aventura!. \n\n "
-                "**INSCRIPCIÓN** \n\n"
-                "Banco Promerica — \n\n"
-                "Titular: SEBASTIAN LORENZO LOPEZ\n\n"
-                "Tipo: Ahorro — Número: 32992082536883\n\n"
+                "**INSCRIPCIÓN** \n"
+                "Banco Promerica — \n"
+                "Titular: SEBASTIAN LORENZO LOPEZ\n"
+                "Tipo: Ahorro — Número: 32992082536883\n"
 
-                "Banco Industrial —\n\n"
-                "Titular: SEBASTIAN LORENZO LOPEZ\n\n"
-                "Tipo: Ahorro — Número: 3698864\n\n"
+                "Banco Industrial —\n"
+                "Titular: SEBASTIAN LORENZO LOPEZ\n"
+                "Tipo: Ahorro — Número: 3698864\n"
 
-                "Proceso 𝐝𝐞 𝐩𝐚𝐠𝐨:\n\n"
-                "1.- Realizar depósito o reserva.\n\n"
-                "2.- Tomar Foto o escanear boleta de pago.\n\n"
-                "3.- LLenar el formulario de participación:\n\n"
-                "https://forms.gle/gdUL8iduCiK8VUYF9 \n\n"
+                "Proceso 𝐝𝐞 𝐩𝐚𝐠𝐨:\n"
+                "1.- Realizar depósito o reserva.\n"
+                "2.- Tomar Foto o escanear boleta de pago.\n"
+                "3.- LLenar el formulario de participación:\n"
+                "https://forms.gle/gdUL8iduCiK8VUYF9 \n"
             }
         }
     elif "btnno" in texto:
@@ -658,7 +659,7 @@ def enviar_mensajes_whatsapp(texto,number):
         "interactive": {
             "type": "button",
             "body": {
-                "text": "¿Confirmas tu registro?"
+                "text": "\n\n ¿Confirmas tu registro?"
             },
             "footer": {
                 "text": "Selecciona una de las opciones"
@@ -706,7 +707,8 @@ def enviar_mensajes_whatsapp(texto,number):
         
         
         if(bandera):
-            time.sleep(2)
+            time.sleep(10)
+            bandera = False
         
             connection.request("POST","/v21.0/526518787218130/messages", data_boton, headers)
             response = connection.getresponse()
