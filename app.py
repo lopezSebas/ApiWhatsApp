@@ -3,12 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import http.client
 import json
+import time
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///metapython.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+bandera = False
 
 class Log(db.Model):
     id = db.Column(db.Integer,primary_key=True)
@@ -153,70 +155,6 @@ def enviar_mensajes_whatsapp(texto,number):
                 "address": "Shell • Rotonda Paseo Las Americas"
             }
         }
-    elif "7" == texto:
-        data ={
-            "messaging_product": "whatsapp",
-            "to": number,
-            "type": "interactive",
-            "interactive":{
-                "type" : "list",
-                "body": {
-                    "text": "Selecciona Alguna Opción"
-                    
-                },
-                "footer": {
-                    "text": "Selecciona una de las opciones para poder ayudarte"
-                },
-                "action":{
-                    "button":"Ver Opciones",
-                    "sections":[
-                        {
-                            "title":"Compra y Venta",
-                            "rows":[
-                                {
-                                    "id":"ev1",
-                                    "title" : "Volcanes 7Orejas Cerro Q",
-                                    "description": "Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo"
-                                },
-                                {
-                                    "id":"btnvender",
-                                    "title" : "Volcán Pacaya",
-                                    "description": "Febrero 09 (Atardecer)"
-                                }
-                            ]
-                        },{
-                            "title":"Distribución y Entrega",
-                            "rows":[
-                                {
-                                    "id":"btndireccion",
-                                    "title" : "Local",
-                                    "description": "Puedes visitar nuestro local."
-                                },
-                                {
-                                    "id":"btnentrega",
-                                    "title" : "Entrega",
-                                    "description": "La entrega se realiza todos los dias."
-                                }
-                            ]
-                        },{
-                            "title":"Trail Running",
-                            "rows":[
-                                {
-                                    "id":"btndireccion",
-                                    "title" : "Local",
-                                    "description": "Puedes visitar nuestro local."
-                                },
-                                {
-                                    "id":"btnentrega",
-                                    "title" : "Entrega",
-                                    "description": "La entrega se realiza todos los dias."
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        }
     elif "4" in texto:
         data = {
             "messaging_product": "whatsapp",
@@ -248,11 +186,6 @@ def enviar_mensajes_whatsapp(texto,number):
                             "title":"Eventos",
                             "rows":[
                                 {
-                                    "id":"a",
-                                    "title" : "Enero 31 - Febrero 02",
-                                    "description": "(Campamento) Volcanes 7 Orejas, Cerro Quemado + Cerro El Granizo"
-                                },
-                                {
                                     "id":"b",
                                     "title" : "Febrero 09",
                                     "description": "(Atardecer) Volcán Pacaya"
@@ -276,21 +209,26 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "id":"f",
                                     "title" : "Febrero 21 - 23",
                                     "description": "Volcán Tajumulco (Asalto - Ruta San Sebastián con acercamiento de 4x4)"
+                                },
+                                {
+                                    "id":"g",
+                                    "title" : "Febrero 22 - 23",
+                                    "description": "Semuc Champey (Express)"
+                                },
+                                {
+                                    "id":"h",
+                                    "title" : "Abril 17 - 20",
+                                    "description": "Trekking Ixil"
+                                },
+                                {
+                                    "id":"i",
+                                    "title" : "Abril 14 - 20",
+                                    "description": "Expedición La Danta (Semana Santa - Todo Incluido)"
                                 }
                             ]
                         },{
                             "title":"Retos",
                             "rows":[
-                                {
-                                    "id":"z",
-                                    "title" : "Reto Jaguar",
-                                    "description": "37 Cumbres 2025 (Guatemala)."
-                                },
-                                {
-                                    "id":"y",
-                                    "title" : "Reto Maya",
-                                    "description": "Rutas Extremas (Guatemala)."
-                                },
                                 {
                                     "id":"w",
                                     "title" : "Reto Chivo",
@@ -369,7 +307,21 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Muchas Gracias por Aceptar."
+                "body": "!Bienvenid@ a la aventura!. \n\n "
+                "**INSCRIPCIÓN** \n\n"
+                "Banco Promerica — \n\n"
+                "Titular: SEBASTIAN LORENZO LOPEZ\n\n"
+                "Tipo: Ahorro — Número: 32992082536883\n\n"
+
+                "Banco Industrial —\n\n"
+                "Titular: SEBASTIAN LORENZO LOPEZ\n\n"
+                "Tipo: Ahorro — Número: 3698864\n\n"
+
+                "Proceso 𝐝𝐞 𝐩𝐚𝐠𝐨:\n\n"
+                "1.- Realizar depósito o reserva.\n\n"
+                "2.- Tomar Foto o escanear boleta de pago.\n\n"
+                "3.- LLenar el formulario de participación:\n\n"
+                "https://forms.gle/gdUL8iduCiK8VUYF9 \n\n"
             }
         }
     elif "btnno" in texto:
@@ -380,7 +332,7 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Es una Lastima."
+                "body": "Es una Lastima, igual te dejaré nuestros próximos tours! https://mountainconqueror.club/tours ."
             }
         }
     elif "btntalvez" in texto:
@@ -391,33 +343,13 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "Estare a la espera."
+                "body": "Estare a al pendiente, si tienes dudas especificas que no encuentras en el documento, puedes escribir al +502 34267938."
             }
         }
         
-    elif "a" == texto.strip():
-        data = {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "document",
-            "document": {
-                "link": "https://mountainconqueror.club/assets/document/events/0.Volcanes_7_Orejas_Cerro_Quemado_Cerro_El_Granizo.pdf",
-                "caption": (
-                    "🌋🔥 *¡Aventura Triple: Siete Orejas, Cerro Quemado y Cerro El Granizo!* 🔥🌋\n\n"
-                    "Prepárate para una jornada épica en tres de las maravillas naturales más fascinantes de Guatemala. "
-                    "Esta travesía te llevará desde las alturas del *Volcán Siete Orejas*, pasando por las formaciones "
-                    "místicas del *Cerro Quemado*, hasta la imponencia del *Cerro El Granizo*, todo en una experiencia "
-                    "que pondrá a prueba tu resistencia y amor por la montaña. 🏔️✨\n\n"
-                    "🔹 *Volcán Siete Orejas*: Con sus siete cumbres, este volcán ofrece paisajes únicos y una conexión profunda con la naturaleza. 🌄\n"
-                    "🔹 *Cerro Quemado*: Terrenos volcánicos y vistas espectaculares en una formación cargada de historia y energía. 🔥\n"
-                    "🔹 *Cerro El Granizo*: La combinación perfecta de desafío y recompensa con paisajes que te dejarán sin aliento. 🌳\n\n"
-                    "✅ *¡No te pierdas esta increíble oportunidad!* Vive una experiencia inolvidable que combina aventura, naturaleza y el espíritu de superación. 💪🐾\n\n"
-                    "#SieteOrejas #CerroQuemado #CerroElGranizo #MontañismoGuatemala #PasiónPorLasAlturas #ConquistaTriple #AventuraÉpica"
-                )
-            }
-        }
+
     elif "b" == texto.strip():
+        bandera = True
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -443,6 +375,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
     elif "c" == texto.strip():
+        bandera = True
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -464,6 +397,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
     elif "d" == texto.strip():
+        bandera = True
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -487,6 +421,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
     elif "e" == texto.strip():
+        bandera = True
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -511,6 +446,7 @@ def enviar_mensajes_whatsapp(texto,number):
             }
         }
     elif "f" == texto.strip():
+        bandera = True
         data = {
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -532,6 +468,116 @@ def enviar_mensajes_whatsapp(texto,number):
                     "✅ *No te pierdas esta oportunidad de conquistar el techo de Centroamérica* y ser parte de una experiencia inolvidable. "
                     "¿Estás listo para el reto? 🚀🔥\n\n"
                     "#VolcánTajumulco #TechoDeCentroamérica #AventuraÉpica #MontañismoGuatemala #SuperandoLímites #ConquistandoCimas"
+                )
+            }
+        }
+    elif "g" == texto.strip():
+        bandera = True
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "caption": (
+                    "🌊✨ *¡Descubre el mágico Semuc Champey!* ✨🌊\n\n"
+                    "🌿 Sumérgete en un paraíso natural con **piscinas de agua turquesa**, impresionantes vistas y cuevas llenas de aventura. "
+                    "Vive una experiencia inolvidable en uno de los destinos más fascinantes de Guatemala. 🌄💙\n\n"
+                    
+                    "📅 **Fecha:** Febrero 22 - 23\n"
+                    "🕒 **Hora de salida Capital:** 9:00 PM ⏳\n"
+                    "💰 **Costo Capital:** Q295 💵\n\n"
+                    "🕒 **Hora de salida Xela:** 5:30 PM ⏳\n"
+                    "💰 **Costo Xela:** Q695 💵\n\n"
+
+                    "📌 **Incluye:** ✅\n"
+                    "✔️ Transporte ida y vuelta 🚐\n"
+                    "✔️ Tour guiado por las pozas naturales 💦\n"
+
+                    "🚫 **No incluye:** ❌\n"
+                    "❌ Alimentación 🍽️\n"
+                    "❌ Bebidas 🥤\n"
+                    "❌ Gastos personales 🛍️\n\n"
+                    "❌ Traslado de 4x4 Q20 por persona (debes cancelar en efectivo el día del viaje, directamente con nuestro staff).\n\n"
+                    "❌ Visita a las **Cuevas de Kan’Ba** (opcional) 🔦 \n\n"
+                    "❌ Tubing en el río Cahabón 🛶 (opcional) \n\n"
+                    "❌ Ingreso al parque natural Semuc Champey. (Q30 nacional y 50 Extranjeros) 🛍️\n\n"
+
+                    "🎟️ *Reserva tu cupo ahora y prepárate para una experiencia épica.*\n"
+                    "📲 *¡Escríbenos para más información y asegura tu lugar!* 🌎🔥\n\n"
+                    "#SemucChampey #AventuraÉpica #GuatemalaMágica #ViajesIncreíbles #TurismoSostenible"
+                )
+            }
+        }
+    elif "i" == texto.strip():
+        bandera = True
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "caption": (
+                    "⛰️🏕️ *¡Trekking Ixil – Conéctate con la Naturaleza y la Cultura!* 🏕️⛰️\n\n"
+                    "🚀 Explora los majestuosos paisajes de la región Ixil, un territorio lleno de historia, cultura y senderos escondidos "
+                    "entre montañas, ríos y valles ancestrales. Vive una **aventura única** en este destino poco explorado. 🌄🔥\n\n"
+
+                    "📅 **Fecha:** 17 - 20 Abril\n"
+                    "🕒 **Hora de salida:** 9:00 PM ⏳\n"
+                    "💰 **Costo:** Q 875 💵\n\n"
+
+                    "📌 **Incluye:** ✅\n"
+                    "✔️ Transporte ida y vuelta 🚐\n"
+                    "✔️ Guías locales y narración cultural 🏞️\n"
+                    "✔️ Acceso a senderos exclusivos 🌿\n"
+                    "✔️ Experiencia en comunidades locales 🏡\n"
+                    "✔️ Seguro básico de trekking 🏕️\n\n"
+
+                    "🚫 **No incluye:** ❌\n"
+                    "❌ Alimentación en el recorrido 🍽️\n"
+                    "❌ Hidratación personal 🥤\n"
+                    "❌ Gastos adicionales personales 🏪\n\n"
+
+                    "🎟️ *Camina por los senderos de la historia y la naturaleza.*\n"
+                    "📲 *¡Reserva tu cupo y únete a esta experiencia única en el corazón de Guatemala!* 🌎🔥\n\n"
+                    "#TrekkingIxil #AventuraEnGuatemala #SenderosSagrados #Montañismo #ExplorandoGuatemala"
+                )
+            }
+        }
+    elif "h" == texto.strip():
+        bandera = True
+        data = {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://mountainconqueror.club/assets/document/events/La_Danta_Semana_Santa.pdf",
+                "caption": (
+                    "🏕️🌿 *¡Expedición La Danta – El Corazón de la Selva Maya!* 🌿🏕️\n\n"
+                    "🚀 Atrévete a una **aventura extrema** explorando el misterioso **Mirador y la Pirámide de La Danta**, "
+                    "una de las más grandes del mundo. Adéntrate en la densa selva petenera y camina entre historia, naturaleza y desafíos únicos. 🌎🔥\n\n"
+
+                    "📅 **Fecha:** 14 - 20 Abril\n"
+                    "🕒 **Hora de salida:** 5:00 AM ⏳\n"
+                    "💰 **Costo:** Q 3,650 💵\n\n"
+                    "💰 **Si reservas antes del 15 de Marzo :** Q 3,450 💵\n\n"
+
+                    "📌 **Incluye:** ✅\n"
+                    "✔️ Transporte terrestre ida y vuelta 🚐\n"
+                    "✔️ Guías especializados en la selva 🌿\n"
+                    "✔️ Permiso de acceso a la reserva arqueológica 🏛️\n"
+                    "✔️ Alimentación en el campamento 🥘\n"
+                    "✔️ Equipo básico de expedición 🎒\n\n"
+
+                    "🚫 **No incluye:** ❌\n"
+                    "❌ Equipo personal de camping ⛺\n"
+                    "❌ Snacks y bebidas adicionales 🥤\n"
+                    "❌ Seguro de viaje 🏥\n\n"
+
+                    "🎟️ *Una expedición solo para verdaderos aventureros.*\n"
+                    "📲 *¡Reserva tu cupo y prepárate para explorar la historia en su máxima expresión!* 🏕️🔥\n\n"
+                    "#ExpediciónLaDanta #AventuraMaya #SelvaPetenera #MontañismoGuatemala #HistoriaYNaturaleza"
                 )
             }
         }
@@ -603,6 +649,48 @@ def enviar_mensajes_whatsapp(texto,number):
         }
 
     data=json.dumps(data)
+    
+    data_boton = {
+        "messaging_product": "whatsapp",
+        "recipient_type": "individual",
+        "to": number,
+        "type": "interactive",
+        "interactive": {
+            "type": "button",
+            "body": {
+                "text": "¿Confirmas tu registro?"
+            },
+            "footer": {
+                "text": "Selecciona una de las opciones"
+            },
+            "action": {
+                "buttons": [
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "btnsi",
+                            "title": "Sí"
+                        }
+                    },
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "btnno",
+                            "title": "No"
+                        }
+                    },{
+                        "type": "reply",
+                        "reply":{
+                            "id":"btntalvez",
+                            "title":"Tal Vez"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    
+    data_boton=json.dumps(data_boton)
 
     headers = {
         "Content-Type" : "application/json",
@@ -615,6 +703,15 @@ def enviar_mensajes_whatsapp(texto,number):
         connection.request("POST","/v21.0/526518787218130/messages", data, headers)
         response = connection.getresponse()
         print(response.status, response.reason)
+        
+        
+        if(bandera):
+            time.sleep(2)
+        
+            connection.request("POST","/v21.0/526518787218130/messages", data_boton, headers)
+            response = connection.getresponse()
+            print(response.status, response.reason)
+        
     except Exception as e:
         agregar_mensajes_log(json.dumps(e))
     finally:
