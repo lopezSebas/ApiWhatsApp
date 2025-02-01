@@ -478,9 +478,10 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "document",
-            "document": {
-                "caption": (
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": (
                     "🌊✨ *¡Descubre el mágico Semuc Champey!* ✨🌊\n\n"
                     "🌿 Sumérgete en un paraíso natural con **piscinas de agua turquesa**, impresionantes vistas y cuevas llenas de aventura. "
                     "Vive una experiencia inolvidable en uno de los destinos más fascinantes de Guatemala. 🌄💙\n\n"
@@ -516,9 +517,10 @@ def enviar_mensajes_whatsapp(texto,number):
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "document",
-            "document": {
-                "caption": (
+            "type": "text",
+            "text": {
+                "preview_url": False,
+                "body": (
                     "⛰️🏕️ *¡Trekking Ixil – Conéctate con la Naturaleza y la Cultura!* 🏕️⛰️\n\n"
                     "🚀 Explora los majestuosos paisajes de la región Ixil, un territorio lleno de historia, cultura y senderos escondidos "
                     "entre montañas, ríos y valles ancestrales. Vive una **aventura única** en este destino poco explorado. 🌄🔥\n\n"
@@ -634,7 +636,46 @@ def enviar_mensajes_whatsapp(texto,number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n\n 🌐 Visita nuestra pagina:\n https://www.instagram.com/x_skyrace/"
+                "body": "¡Sumérgete en la emocionante experiencia de la X-SKYRACE! Este desafío te invita a conquistar elevaciones impresionantes "
+                "y explorar la majestuosidad de terrenos montañosos a través de una competición de resistencia y determinación. Prepárate para elevar "
+                "tu espíritu y desafiar los límites en los 3 volcanes de Xela, Cerró Quemado, Santa María, Siete Orejas \n\n "
+                
+                " El evento se desarrolla en el parque entre cerros privado con seguridad el 15 de abril del 2025\n\n "
+                
+                "Inscripción hasta el 16 de Marzo 2025\n\n "
+                "• 10 KM: Q 220.00\n"
+                "• 14 KM: Q 250.00\n"
+                "• 24 KM: Q 310.00\n"
+                "• 42 KM: Q 400.00\n"
+                
+                "Cuenta Monetaria *Banrural*\n"
+                "a nombre de *Miguel Angel Chic López*\n"
+                "Si gustas pagar con tarjeta, solicita el *NEOLINK* al +502 3426 7938 \n"
+                "*aplica recargo del 5%\n\n"
+                
+                "*Incluye:*\n"
+                "• Playera\n"
+                "• Medalla\n"
+                "• Número\n"
+                "• Certificado electrónico\n"
+                "• Seguridad\n"
+                "• Entrada al parque entre cerros (uso de piscina y ducha)\n"
+                "• Servicios sanitario\n"
+                "• Servicios médicos\n"
+                "• Hidratación\n"
+                "• Puestos de abastecimiento\n"
+                "• Fotografías y video\n\n"
+                
+                "No se aceptan devoluciones.\n"
+                "Restricción de edad: Apto para todo público con buena condición física.\n"
+                
+                "*No incluye:*\n"
+                "- Costo del ingreso de familiares y acompañantes de los corredores (Q30 por persona).\n"
+                "- Alimentación.\n"
+                "- Hospedaje.\n\n"
+                
+                "🌐 Visita nuestra redes sociales:\n https://www.instagram.com/x_skyrace/\n"
+                "https://www.facebook.com/XSkyRace"
             }
         }
     else:
