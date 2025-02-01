@@ -216,12 +216,12 @@ def enviar_mensajes_whatsapp(texto,number):
                                     "description": "Semuc Champey (Express)"
                                 },
                                 {
-                                    "id":"h",
+                                    "id":"i",
                                     "title" : "Abril 17 - 20",
                                     "description": "Trekking Ixil"
                                 },
                                 {
-                                    "id":"i",
+                                    "id":"h",
                                     "title" : "Abril 14 - 20",
                                     "description": "Expedición La Danta (Semana Santa - Todo Incluido)"
                                 }
@@ -309,14 +309,14 @@ def enviar_mensajes_whatsapp(texto,number):
                 
                 "preview_url": False,
                 "body": "!Bienvenid@ a la aventura!. \n\n "
-                "**INSCRIPCIÓN** \n"
+                "**INSCRIPCIÓN** \n\n"
                 "Banco Promerica — \n"
                 "Titular: SEBASTIAN LORENZO LOPEZ\n"
-                "Tipo: Ahorro — Número: 32992082536883\n"
+                "Tipo: Ahorro — Número: 32992082536883\n\n"
 
                 "Banco Industrial —\n"
                 "Titular: SEBASTIAN LORENZO LOPEZ\n"
-                "Tipo: Ahorro — Número: 3698864\n"
+                "Tipo: Ahorro — Número: 3698864\n\n"
 
                 "Proceso 𝐝𝐞 𝐩𝐚𝐠𝐨:\n"
                 "1.- Realizar depósito o reserva.\n"
