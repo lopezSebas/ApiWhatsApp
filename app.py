@@ -347,8 +347,6 @@ def enviar_mensajes_whatsapp(texto,number):
                 "body": "Estare a al pendiente, si tienes dudas especificas que no encuentras en el documento, puedes escribir al +502 34267938."
             }
         }
-        
-
     elif "b" == texto.strip():
         bandera = True
         data = {
@@ -642,7 +640,7 @@ def enviar_mensajes_whatsapp(texto,number):
                 
                 " El evento se desarrolla en el parque entre cerros privado con seguridad el 15 de abril del 2025\n\n "
                 
-                "Inscripción hasta el 16 de Marzo 2025\n\n "
+                "*Inscripción hasta el 16 de Marzo 2025*\n\n "
                 "• 10 KM: Q 220.00\n"
                 "• 14 KM: Q 250.00\n"
                 "• 24 KM: Q 310.00\n"
@@ -652,6 +650,9 @@ def enviar_mensajes_whatsapp(texto,number):
                 "a nombre de *Miguel Angel Chic López*\n"
                 "Si gustas pagar con tarjeta, solicita el *NEOLINK* al +502 3426 7938 \n"
                 "*aplica recargo del 5%\n\n"
+                
+                "Llenar formulario de inscripción\n"
+                "https://forms.gle/KCPYMohn3AzGChRk7\n\n"
                 
                 "*Incluye:*\n"
                 "• Playera\n"
